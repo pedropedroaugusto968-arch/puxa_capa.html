@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KING SENSI 0-200</title>
+    <style>
+        :root { --king: #ffcc00; }
+        body { background: #000; color: #fff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { width: 330px; background: #0a0a0a; border: 2px solid var(--king); border-radius: 15px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(255, 204, 0, 0.2); }
+        .res { text-align: left; background: #111; padding: 15px; border-radius: 10px; margin: 20px 0; border: 1px solid #222; }
+        .row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #222; font-size: 14px; }
+        .row b { color: var(--king); }
+        button { width: 100%; padding: 15px; background: var(--king); border: none; border-radius: 8px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2 style="color:var(--king); margin:0;">KING SENSI 🎯</h2>
+        <p style="font-size: 10px; color: #666;">OTIMIZADO POR @eoo_gomes3</p>
+        <div class="res">
+            <div class="row">GERAL (0-200): <b id="g">--</b></div>
+            <div class="row">RED DOT: <b id="r">--</b></div>
+            <div class="row">MIRA 2X: <b id="m2">--</b></div>
+            <div class="row">MIRA 4X: <b id="m4">--</b></div>
+        </div>
+        <button onclick="gerar()">GERAR CONFIG CAPA</button>
+    </div>
+    <script>
+        function gerar() {
+            // Foco em valores altos para não dar lag na puxada
+            document.getElementById('g').innerText = Math.floor(Math.random() * (200 - 180) + 180);
+            document.getElementById('r').innerText = Math.floor(Math.random() * (200 - 175) + 175);
+            document.getElementById('m2').innerText = Math.floor(Math.random() * (200 - 170) + 170);
+            document.getElementById('m4').innerText = Math.floor(Math.random() * (200 - 185) + 185);
+        }
+    </script>
+</body>
+</html>
